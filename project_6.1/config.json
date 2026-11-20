@@ -1,0 +1,30 @@
+{
+  "data": {
+    "features_path": "/content/processed/features.parquet",
+    "churn_path": "/content/out/reference/churn_truth.csv"
+  },
+  "preprocessing": {
+    "test_size": 0.4,
+    "val_size": 0.5,
+    "random_state": 42
+  },
+  "model": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "artifacts": {
+    "model_dir": "/content/processed/model_6.1",
+    "model_name": "best_model.pkl",
+    "scaler_name": "scaler.pkl",
+    "features_name": "features.json",
+    "metrics_name": "metrics.json"
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(levelname)s - %(message)s"
+  }
+}
